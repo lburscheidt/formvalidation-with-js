@@ -5,7 +5,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 const jsForm = document.querySelectorAll(".js-form");
 const errorMsgs = {
-	badInput: "Bad input",
+	badInput: "Bad input.",
 	patternMismatch: "Pattern mismatch.",
 	rangeOverflow: "Number too large.",
 	rangeUnderflow: "Number too small.",
