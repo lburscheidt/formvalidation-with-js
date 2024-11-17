@@ -91,10 +91,12 @@ form p {
 	width: 250px;
 }
 
-:valid {
+input:valid,
+select:valid {
 	border: 2px solid green;
 }
 
-:invalid {
+input:invalid,
+select:invalid {
 	border: 2px solid red;
 }

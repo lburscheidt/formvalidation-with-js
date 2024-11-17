@@ -15,11 +15,11 @@
       <h1>Personal details form</h1>
       <p>Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
       <label for="email">Email address<span aria-label="required">*</span></label><input class="js-form" id="email"
-        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" type="email">
+        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" type="email" required>
       <div class="hidden tick" id="EmailTick"><i class="fa-solid fa-check" style="color: green;"></i></div>
 
-      <label for="country">Country<span aria-label="required">*</span></label><select class="js-form" id="country"
-        type="text" required>
+      <label for="country">Country<span aria-label="required">*</span></label>
+      <select class="js-form" id="country" type="text" required>
         <option value="">Select your country</option>
         <option value="AF">Afghanistan</option>
         <option value="AX">Åland Islands</option>
@@ -273,14 +273,14 @@
       </select>
       <div class="hidden tick" id="country-tick"><i class="fa-solid fa-check" style="color: green;"></i></div></select>
       <label for="postcode">Postcode<span aria-label="required">*</span></label><input class="js-form" id="postcode"
-        type="text">
+        type="text" required>
       <div class="hidden tick" id="postcodeTick"><i class="fa-solid fa-check" style="color: green;"></i></div>
 
       <label for="password">Password<span aria-label="required">*</span></label><input class="js-form" id="password"
-        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,64}$" type="password">
+        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,64}$" type="password" required>
       <div class="hidden tick" id="pwTick"><i class="fa-solid fa-check" style="color: green;"></i></div>
       <label for="confirmPassword">Confirm password<span aria-label="required">*</span></label><input class="js-form"
-        id="confirmPassword">
+        id="confirmPassword" required>
       <div class="hidden tick" id="confirmPwTick"><i class="fa-solid fa-check" style="color: green;"></i></div>
       <button class="js-form" id="submitBtn" type="submit">Submit Form</button>
     </form>
