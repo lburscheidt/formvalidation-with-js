@@ -1,9 +1,10 @@
 {
 	"name": "webpack",
 	"version": "1.0.0",
-	"description": "",
 	"main": "index.js",
-	"sideEffects": ["*.css"],
+	"sideEffects": [
+		"*.css"
+	],
 	"scripts": {
 		"dev": "webpack serve --open --config webpack.dev.js",
 		"build": "webpack --config webpack.prod.js",
@@ -303,5 +304,6 @@
 		"which": "^2.0.2",
 		"wildcard": "^2.0.1",
 		"ws": "^8.18.0"
-	}
+	},
+	"description": ""
 }
