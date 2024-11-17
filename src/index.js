@@ -37,7 +37,7 @@ function setPasswordPattern() {
 	confirmPassword.setAttribute("pattern", password.value);
 }
 
-window.onload(assignVariables(jsForm));
+assignVariables(jsForm);
 
 form.addEventListener("focusout", (e) => {
 	const target = e.target;
@@ -56,13 +56,14 @@ form.addEventListener("focusout", (e) => {
 				setPasswordPattern();
 			}
 		} else {
+			const targetFail = `${target.id}Fail`;
+			const targetFailObject = document.getElementById(targetFail);
 			let errorMsg = "";
 			const keys = Object.keys(errorMsgs);
 			const filtered = keys.filter((key) => target.validity[key]);
 			for (const element of filtered) {
 				errorMsg += `${errorMsgs[`${element}`]} `;
 			}
-
 			switch (target.id) {
 				case "email":
 					errorMsg +=
@@ -84,6 +85,7 @@ form.addEventListener("focusout", (e) => {
 					break;
 			}
 			target.setCustomValidity(errorMsg);
+			targetFailObject.classList.remove("hidden");
 			target.reportValidity();
 		}
 	}
